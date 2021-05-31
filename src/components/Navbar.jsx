@@ -5,6 +5,7 @@ function Navbar() {
     <div className="navbar">
       <div className="menu first"><a href="#">Профиль</a></div>
       <div className="menu"><a href="#">Сообщения</a></div>
+      <div className="menu"><a href="#">Друзья</a></div>
       <div className="menu"><a href="#">Группы</a></div>
       <div className="menu"><a href="#">Новости</a></div>
       <div className="menu"><a href="#">Музыка</a></div>
