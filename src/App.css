@@ -108,15 +108,32 @@ main {
   margin-top: 20px;
 }
 
+.btn-primary {
+  color: #093b79;
+  margin-top: 10px;
+  background-color: #adff2f;
+  border-color: greenyellow;
+}
+.btn-primary:hover {
+  color: #093b79;
+  background-color: #adff2f;
+  border-color: #adff2f;
+  font-weight: 500;
+}
+.btn-primary:active {
+  color: #093b79;
+  background-color: #adff2f;
+}
+
 .list {
   display: flex;
   margin-top: 20px;
 }
 
 .paint {
-  border: 1px solid #4464cf;
+  /*border: 1px solid ;*/
   border-radius: 50%;
-  background-color: #4464cf;
+  /*background-color: #4464cf;*/
   width: 30px;
   height: 30px;
   margin: 0px 10px 0 0;

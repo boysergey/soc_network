@@ -13,9 +13,9 @@ function Content() {
         </div>
         <div className="description">
           <div className="name">John Dou</div>
-          <div className="birthday">Date of Birth: 2 january</div>
-          <div className="city">City: Odessa</div>
-          <div className="education">Education: OGU Mechnikova`2020</div>
+          <div className="birthday">День рождения: 02.01.1999</div>
+          <div className="city">Город: Odessa</div>
+          <div className="education">Образование: OGU Mechnikova`2020</div>
           <div className="site">
             <a href="https://aquaplus.od.ua">Web Site: https://aquaplus.od.ua</a>
           </div>
@@ -23,18 +23,21 @@ function Content() {
       </div>
       <div className="posts">
         <div className="post_title">
-          My posts
+          Мои сообщения
         </div>
         <form>
           <div className="form-group">
             <label htmlFor="formGroupExampleInput"/>
             <input type="text" className="form-control" id="formGroupExampleInput"
-                   placeholder="Enter your message"/>
+                   placeholder="Введите ваше сообщение"/>
+          </div>
+          <div className="d-grid gap-2 col-6 mx-auto">
+            <button className="btn btn-primary" type="button">Отправить сообщение</button>
           </div>
         </form>
       </div>
       <div className="list">
-        <div className="paint">1</div>
+        <div className="paint"><img className="paint" src="https://socialniesety.ru/files/images/components/articles_journal/originals/instagram/403/kak_sdelat_krasivuyu_avatarku_v_instagram_1.jpg" alt=""/></div>
         <div className="messages">
           <p>Hi buddy, how are you?</p>
         </div>
