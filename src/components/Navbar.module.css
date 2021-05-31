@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #adff2f;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.navbar a {
+  margin-left: 60px;
+}
+
+.menu {
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
+
+.menu_last {
+  margin-top: 100px;
+  font-size: 1.2rem;
+}
+
+.menu_first {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.menu:hover {
+  text-shadow: 0 1px 1px #000, 0px 1px 2px #000;
+  color: #000000;
+}
