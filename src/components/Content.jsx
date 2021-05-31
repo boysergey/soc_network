@@ -13,7 +13,7 @@ function Content() {
         </div>
         <div className="description">
           <div className="name">John Dou</div>
-          <div className="birthday">День рождения: 02.01.1999</div>
+          <div className="birthday">День рождения: 22.10.1999</div>
           <div className="city">Город: Odessa</div>
           <div className="education">Образование: OGU Mechnikova`2020</div>
           <div className="site">
