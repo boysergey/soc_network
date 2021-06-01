@@ -20,7 +20,8 @@ function MyPost() {
           </div>
         </form>
       </div>
-      <Post/>
+      <Post message='Привет' LikeCount='Like 10'/>
+      <Post message='Как жизнь?' LikeCount='Like 21'/>
     </div>
 
 );
