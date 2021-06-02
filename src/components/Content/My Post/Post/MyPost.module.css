@@ -7,19 +7,19 @@
   margin-top: 20px;
 }
 
-.btn-primary {
+.btn .btn-primary .btn-px {
   color: #093b79;
   margin-top: 10px;
   background-color: #adff2f;
   border-color: greenyellow;
 }
-.btn-primary:hover {
+.btn .btn-primary .btn-px:hover {
   color: #093b79;
   background-color: #adff2f;
   border-color: #adff2f;
   font-weight: 500;
 }
-.btn-primary:active {
+.btn .btn-primary .btn-px:active {
   color: #093b79;
   background-color: #adff2f;
 }

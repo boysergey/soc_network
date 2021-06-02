@@ -1,6 +1,5 @@
 .content {
-  margin-left: 10px;
-  width: 100%;
+
 }
 
 .fond img {
@@ -26,43 +25,26 @@
   line-height: 1.8;
 }
 
-.name, .post_title {
+.name {
   font-size: 18px;
   font-weight: bold;
 }
 
-.posts {
-  margin-top: 20px;
-}
 
-.btn-primary {
+.btn .btn-primary .btn-px {
   color: #093b79;
   margin-top: 10px;
   background-color: #adff2f;
   border-color: greenyellow;
 }
-.btn-primary:hover {
+.btn .btn-primary .btn-px:hover {
   color: #093b79;
   background-color: #adff2f;
   border-color: #adff2f;
   font-weight: 500;
 }
-.btn-primary:active {
+.btn .btn-primary .btn-px:active {
   color: #093b79;
   background-color: #adff2f;
 }
 
-.list {
-  display: flex;
-  margin-top: 20px;
-}
-
-.paint {
-  /*border: 1px solid ;*/
-  border-radius: 50%;
-  /*background-color: #4464cf;*/
-  width: 30px;
-  height: 30px;
-  margin: 0px 10px 0 0;
-  text-align: center;
-}
