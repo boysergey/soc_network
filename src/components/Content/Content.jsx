@@ -5,7 +5,7 @@ import MyPost from './My Post/Post/MyPost';
 
 function Content() {
   return (
-    <div className={s.content}>
+    <div>
       <div className={s.fond}>
         <img src="https://images.samsung.com/is/image/samsung/p5/ru/explore/landscape-photography/Explore_How_To_Take_Great_Landscape_Photography_KV.jpg?$ORIGIN_JPG$" alt="fond"/>
       </div>

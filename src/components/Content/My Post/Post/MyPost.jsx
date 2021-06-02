@@ -16,7 +16,7 @@ function MyPost() {
                    placeholder="Введите ваше сообщение"/>
           </div>
           <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn btn-primary" type="button">Отправить сообщение</button>
+            <button className="btn btn-primary btn-px" type="button">Отправить сообщение</button>
           </div>
         </form>
       </div>
