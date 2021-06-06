@@ -8,10 +8,10 @@ function Post(props) {
       <div className={s.list}>
         <div><img className={s.paint}
                   src="https://socialniesety.ru/files/images/components/articles_journal/originals/instagram/403/kak_sdelat_krasivuyu_avatarku_v_instagram_1.jpg"
-                  alt=""/></div>
+                  alt="avatar"/></div>
         <div className="s.item">{props.message}
           <div>
-            <span>{props.LikeCount}</span>
+            <span>Like  {props.likesCount}</span>
           </div>
         </div>
 

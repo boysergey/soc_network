@@ -1,7 +1,3 @@
-.dialogs{
-  display: flex;
-  margin-right: 10px;
-}
 
 /*.dialog{
 color: blue;
@@ -50,7 +46,7 @@ flex: 2;
   min-width: 100px;
   margin: 50px auto;
   padding: 16px;
-  /*background: #1b2f4a;*/
+  background: #adff2f;
   background-clip: padding-box;
   border: 6px double #860;
   border-image-source: url(http://usabili.ru/news_imgs/151/border7.png);
