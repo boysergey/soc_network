@@ -1,11 +1,26 @@
-.post_title {
+.avatar img {
+  width: 200px;
+  /*height: 200px;*/
+  border: 1px solid;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.description {
+  margin-left: 50px;
+  line-height: 1.8;
+}
+
+.name {
   font-size: 18px;
   font-weight: bold;
 }
 
-.posts {
-  margin-top: 20px;
-}
 
 .btn .btn-primary .btn-px {
   color: #093b79;
@@ -13,26 +28,16 @@
   background-color: #adff2f;
   border-color: greenyellow;
 }
+
 .btn .btn-primary .btn-px:hover {
   color: #093b79;
   background-color: #adff2f;
   border-color: #adff2f;
   font-weight: 500;
 }
+
 .btn .btn-primary .btn-px:active {
   color: #093b79;
   background-color: #adff2f;
 }
 
-.list {
-  display: flex;
-  margin-top: 20px;
-}
-
-.paint {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin: 0px 10px 0 0;
-  text-align: center;
-}

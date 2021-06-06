@@ -6,9 +6,8 @@
 .paint {
   /*border: 1px solid ;*/
   border-radius: 50%;
-  /*background-color: #4464cf;*/
   width: 30px;
   height: 30px;
-  margin: 0px 10px 0 0;
+  margin: 0 10px 0 0;
   text-align: center;
 }
