@@ -3,15 +3,14 @@ import s from './Content.module.css';
 import MyPost from './My Post/Post/MyPost';
 import Profileinfo from './Profileinfo/Profileinfo';
 
-
-function Content() {
+function Content(props) {
   return (
     <div>
       <div className={s.fond}>
         <img src="https://images.samsung.com/is/image/samsung/p5/ru/explore/landscape-photography/Explore_How_To_Take_Great_Landscape_Photography_KV.jpg?$ORIGIN_JPG$" alt="fond"/>
       </div>
      <Profileinfo/>
-      <MyPost/>
+      <MyPost postsData = {props.postsData} />
     </div>
 );
 }
