@@ -31,7 +31,7 @@ let messagesData = [
   { id: 4, message: 'Чем занимаешьяс?' },
   { id: 5, message: 'Делаю уроки.' },
   { id: 6, message: 'Помочь?' },
-  { id: 7, message: 'Нет, спасибо.' },
+  { id: 7, message: 'Нет, спасибо, я сам' },
   { id: 8, message: 'Если что, приши, помогу.' },
 ]
 
