@@ -58,15 +58,10 @@ flex: 2;
   border-image-repeat: repeat stretch;
   border-image-width: 120px 100px 140px; /* можно просто auto, эффект будет тот же */
   border-image-outset: 36px 30px 58px 28px;
-  /*
-  или сокращенно:
-  border-image: url(http://usabili.ru/news_imgs/151/border7.png) 120 100 140 fill / auto / 36px 30px 58px 28px repeat stretch
-  */
-  border-radius: 44px;
 }
-/*.message:hover {
-  border-image: none;
-}*/
+/*.message:hover {*/
+/*  border-image: none;*/
+/*}*/
 .paint{
   border-radius: 50%;
   width: 45px;

@@ -9,15 +9,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Friends from './components/Friends/Friends';
 import Groups from './components/Groups/Groups';
 import News from './components/News/News';
-import Music from './components/Music/Music'
+import Music from './components/Music/Music';
 
 let SomeComponent = () => <Dialogs/>
-/*let SomeComponent = () => <Content/>
-let SomeComponent = () => <Friends/>
-let SomeComponent = () => <Groups/>
-let SomeComponent = () => <News/>
-let SomeComponent = () => <Music/>*/
-
 
 
 

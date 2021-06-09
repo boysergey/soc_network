@@ -1,18 +1,8 @@
 import React from 'react';
-import s from './Dialogs.module.css'
-import { NavLink } from 'react-router-dom';
+import s from './Dialogs.module.css';
+import DialogItem from './Dialogitem/Dialogsitem';
+import Message from './Message/Message';
 
-function DialogItem(props) {
-  return <div className={s.dialog + ' ' + s.active}><img className={s.paint}
-                                                         src='https://socialniesety.ru/files/images/components/articles_journal/originals/instagram/422/kak_sdelat_artavatarku_v_instagram_13.jpg'
-                                                         alt='avatar'/>
-    <NavLink to={'/dialogs/' + props.id}>{props.name}</NavLink></div>
-}
-
-function Message(props) {
-  return <div className={s.message}>{props.message}
-  </div>
-}
 
 function Dialogs(props) {
   let dialogsData = [
