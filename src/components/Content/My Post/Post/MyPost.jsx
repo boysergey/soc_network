@@ -2,19 +2,10 @@ import React from 'react';
 import s from './MyPost.module.css'
 import Post from './Post'
 
-function MyPost(props) {
-  let postsData = [
-    { id: 1, message: 'Приветик', likesCount:85},
-    { id: 2, message: 'Как жизнь Дружище?', likesCount:12 },
-    { id: 3, message: 'Все отлично!!!', likesCount:1 },
-    { id: 4, message: 'Чем занимаешься?', likesCount:2 },
-    { id: 5, message: 'Делаю уроки.', likesCount:21 },
-    { id: 6, message: 'Помочь?', likesCount:6 },
-    { id: 7, message: 'Нет, спасибо.', likesCount:41 },
-    { id: 8, message: 'Если что, приши, помогу.', likesCount:5 },
-  ]
+const MyPost = (props) => {
+
   let messageElements =
-    postsData.map(posts => <Post message={posts.message} likesCount={posts.likesCount} id = {posts.id}/>)
+    props.postsData.map(posts => <Post message={posts.message} likesCount={posts.likesCount} id = {posts.id}/>)
   return (
 
     <div>

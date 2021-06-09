@@ -11,16 +11,6 @@ import Groups from './components/Groups/Groups';
 import News from './components/News/News';
 import Music from './components/Music/Music'
 
-let SomeComponent = () => <Dialogs/>
-/*let SomeComponent = () => <Content/>
-let SomeComponent = () => <Friends/>
-let SomeComponent = () => <Groups/>
-let SomeComponent = () => <News/>
-let SomeComponent = () => <Music/>*/
-
-
-
-
 function App(props) {
   return (
     <BrowserRouter> {
@@ -30,8 +20,8 @@ function App(props) {
           <Navbar/>
 
           <div className="app-wrapper_content">
-            <Route path="/dialogs" render={SomeComponent}/>
-            <Route path="/content" render={() => <Content/>}/>
+            <Route path="/dialogs" render={() => <Dialogs dialogsData = {props.dialogsData} messagesData = {props.messagesData}/>}/>
+            <Route path="/content" render={() => <Content postsData = {props.postsData}/>}/>
             <Route path="/friends" render={() => <Friends/>}/>
             <Route path="/groups" render={() => <Groups/>}/>
             <Route path="/news" render={() => <News/>}/>

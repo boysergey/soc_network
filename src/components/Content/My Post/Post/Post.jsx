@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Post.module.css';
 
-
 function Post(props) {
   return (
     <div>
@@ -14,11 +13,8 @@ function Post(props) {
             <span>Like  {props.likesCount}</span>
           </div>
         </div>
-
       </div>
-
     </div>
-
   );
 }
 
