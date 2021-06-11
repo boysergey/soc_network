@@ -1,15 +1,22 @@
+
+
 .app-wrapper {
   text-decoration: none;
   color: black;
   margin: 0 5px 0 5px;
+  font-family: Ustroke, cursive;
 }
 
+h1{
+  font-family: Ustroke, cursive;
+  text-shadow: 2px 2px 3px black, 7px 5px 5px #e80f55;
+}
 a {
   text-decoration: none;
   color: black;
 }
 
-wrapper {
+.section {
   display: flex;
   flex-direction: row;
 

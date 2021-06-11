@@ -4,6 +4,7 @@ header {
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -22,9 +23,10 @@ header a {
   width: 150px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .menu {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   margin-right: 25px;
 }
 .menu:hover {
