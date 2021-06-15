@@ -17,13 +17,13 @@ function App(props) {
             <div className="app-wrapper">
                 <Header/>
                 <div className='section'>
-                    <Navbar/>
+                    <Navbar dialogsData={props.state.dialogsData}/>
 
                     <div className="app-wrapper_content">
                         <Route path="/dialogs" render={() => <Dialogs dialogsData={props.state.dialogsData}
                                                                       messagesData={props.state.messagesData}/>}/>
                         <Route path="/content" render={() => <Content postsData={props.state.postsData}/>}/>
-                        <Route path="/friends" render={() => <Friends/>}/>
+                        <Route path="/friends" render={() => <Friends dialogsData={props.state.dialogsData}/>}/>
                         <Route path="/groups" render={() => <Groups/>}/>
                         <Route path="/news" render={() => <News/>}/>
                         <Route path="/music" render={() => <Music/>}/>

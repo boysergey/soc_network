@@ -3,8 +3,10 @@ header {
   padding: 4px;
   margin: 10px auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .logo {
@@ -22,8 +24,7 @@ header a {
   display: flex;
   width: 150px;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
 }
 .menu {
   /*margin-bottom: 20px;*/

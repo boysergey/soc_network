@@ -1,42 +1,49 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Content from './components/Content/Content';
-import Dialogs from './components/Dialogs/Dialogs';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Friends from './components/Friends/Friends';
-import Groups from './components/Groups/Groups';
-import News from './components/News/News';
-import Music from './components/Music/Music';
+    const collectDialogs = () => {
+        const dialogs = [];
+        for (let i = 0; i < 4; i++) {
+            dialogs.push(<DialogItem name={props.dialogsData[i].name} id={props.dialogsData[i].id}/>)
+        }
+        return dialogs;
+    }
+    return (
+        <div>
+            {collectDialogs()}
+        </div>
+    )
+    function Friends(props) {
+        return(
+            <div>
+                {props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)}
+            </div>
+        )
+    }
 
-let SomeComponent = () => <Dialogs/>
 
 
 
-function App(props) {
-  return (
-    <BrowserRouter> {
-      <div className="app-wrapper">
-        <Header/>
-        <wrapper>
-          <Navbar/>
-
-          <div className="app-wrapper_content">
-            <Route path="/dialogs" render={SomeComponent}/>
-            <Route path="/content" render={() => <Content/>}/>
-            <Route path="/friends" render={() => <Friends/>}/>
-            <Route path="/groups" render={() => <Groups/>}/>
-            <Route path="/news" render={() => <News/>}/>
-            <Route path="/music" render={() => <Music/>}/>
-          </div>
-        </wrapper>
-        <Footer/>
-      </div>
-    }</BrowserRouter>
-
-  );
-}
-
-export default App;
+    .message {
+        width: 300px;
+        border-radius: 15px;
+        border: 3px solid #1AA0D2;
+        display: inline-block;
+        position: relative;
+    }
+    .message::after {
+        content: '';
+        width: 39px;
+        height: 50px;
+        border-left: 3px solid #1AA0D2;
+        border-bottom: 5px solid #1AA0D2;
+        position: absolute;
+        bottom: -20px;
+        left: 40px;
+        background: white;
+        transform: skewX(-30deg) skewY(-48deg);
+    }
+    .message-in {
+        border-radius: 12px;
+        padding: 30px;
+        background: white;
+        position: relative;
+        z-index: 2;
+    }

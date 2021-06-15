@@ -1,0 +1,11 @@
+
+.block{
+   display: flex;
+   justify-content: center;
+}
+.paint{
+   display: flex;
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+}

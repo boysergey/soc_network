@@ -1,71 +1,87 @@
-.dialogs{
-  display: flex;
-  margin-right: 10px;
+.dialogs {
+    display: flex;
+    margin-right: 10px;
 }
 
-/*.dialog{
-color: blue;
-  margin-top: 20px;
-  margin-left: 20px;
-}*/
 .dialog {
-  font: 1em/1.5 sans-serif;
-  color: #fff;
-  width: 50%;
-  min-height: 40px;
-  min-width: 100px;
-  margin: 50px auto;
-  padding: 6px;
-  background: #adff2f;
-  background-clip: padding-box;
-  border: 6px double #860;
-  border-radius: 44px;
+    font: 1em/1.5 sans-serif;
+    color: #fff;
+    width: 50%;
+    min-height: 40px;
+    min-width: 100px;
+    margin: 50px auto;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
 }
-.dialog:hover {
-  border-image: none;
-}
-/*a { color: #ff6; }*/
 
-.dialogsItem{
-  flex: 1;
+.dialog:hover {
+    border-image: none;
 }
-/*.dialogsItem .active{
-  color: gold;
-}*/
-.messages{
-flex: 2;
+
+.dialogsItem {
+    flex: 1;
 }
-/*.message{
-  color: red;
-  margin-top: 20px;
-  border: darkred 2px double ;
-  border-radius: 50%;
-  text-align: center;
-}*/
+
+.dialogsItem .active {
+    color: gold;
+}
+
+.paint {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+
+.messages {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
 .message {
-  font: 1em/1.5 sans-serif;
-  color: #fff;
-  width: auto;
-  min-height: 40px;
-  min-width: 100px;
-  margin: 50px auto;
-  padding: 16px;
-  /*background: #1b2f4a;*/
-  background-clip: padding-box;
-  border: 6px double #860;
-  border-image-source: url(http://usabili.ru/news_imgs/151/border7.png);
-  border-image-slice: 120 100 140 fill;
-  border-image-repeat: repeat stretch;
-  border-image-width: 120px 100px 140px; /* можно просто auto, эффект будет тот же */
-  border-image-outset: 36px 30px 58px 28px;
+    position: relative;
+    min-width: 140px;
+    height: 60px;
+    text-align: center;
+    line-height: 45px;
+    background-color: #ffffff;
+    border: 8px solid #adff2f;
+    border-radius: 30px;
+    padding: 0 15px;
+    box-shadow: 2px 2px 4px #888;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
 }
-/*.message:hover {*/
-/*  border-image: none;*/
-/*}*/
-.paint{
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  margin: 0 10px 0 0;
-  text-align: center;
+
+.message:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 52px;
+    border: 25px solid;
+    border-color: #adff2f transparent transparent #adff2f;
+
 }
+
+.message:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 40px;
+    top: 44px;
+    border: 17px solid;
+    border-color: #fff transparent transparent #fff;
+}
+
