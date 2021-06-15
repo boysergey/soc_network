@@ -9,25 +9,46 @@
 }
 
 .menu {
-  margin-bottom: 20px;
-  margin-right: 25px;
+  margin-top: 20px;
 }
 
-.menu_last {
-  margin-top: 100px;
-  font-size: 1.2rem;
+.menu_last  {
+  margin: 100px 30px 10px 0;
+  font-size: 1.5rem;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.menu_friends{
+  margin-top: 50px;
+  font-size: 24px;
+
 }
 
-.menu_first {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
+/*.menu_first {*/
+/*  margin-top: 30px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
 
 .menu:hover {
-  text-shadow: 0 1px 1px #000, 0px 1px 2px #000;
+  /*text-shadow: 0 1px 1px #000, 0px 1px 2px #000;*/
   color: #000000;
 }
-.menu a .activ{
-  color: red;
-  font-weight: bold;
+.navbar .active{
+  color: blue;
+  /*font-weight: bold;*/
+}
+.dialog {
+  font: 1em/1.5 sans-serif;
+  color: #fff;
+  width: 50%;
+  min-height: 40px;
+  min-width: 100px;
+  margin: 50px auto;
+  padding: 6px;
+  background: #adff2f;
+  background-clip: padding-box;
+  border: 6px double #860;
+  border-radius: 44px;
 }
