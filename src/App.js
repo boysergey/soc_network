@@ -22,7 +22,10 @@ function App(props) {
                     <div className="app-wrapper_content">
                         <Route path="/dialogs" render={() => <Dialogs dialogsData={props.state.dialogsData}
                                                                       messagesData={props.state.messagesData}/>}/>
-                        <Route path="/content" render={() => <Content postsData={props.state.postsData}/>}/>
+                        <Route path="/content"
+                               render={() => <Content
+                                   postsData={props.state.postsData}
+                                   addPost ={props.addPost}/>}/>
                         <Route path="/friends" render={() => <Friends dialogsData={props.state.dialogsData}/>}/>
                         <Route path="/groups" render={() => <Groups/>}/>
                         <Route path="/news" render={() => <News/>}/>

@@ -5,7 +5,7 @@ import s from './Navbar.module.css'
 import {NavLink} from 'react-router-dom';
 import Friends from "../Friends/Friends";
 import DialogItem from "../Dialogs/Dialogitem/Dialogsitem";
-import Photo from "../Photo/Photo";
+// import Photo from "../Photo/Photo";
 
 
 function Navbar(props) {
@@ -20,7 +20,7 @@ function Navbar(props) {
             <div className={s.menu}><NavLink to="/music" activeClassName={s.active}>Музыка</NavLink></div>
             <div className={s.menu_friends}><NavLink to="/friends" activeClassName={s.active}>Друзья</NavLink></div>
             {/*<Friends dialogsData={props.dialogsData}/>*/}
-            <Photo dialogsData={props.dialogsData}/>
+            {/*<Photo dialogsData={props.dialogsData}/>*/}
             <div className={s.menu_last}><NavLink to="/settings" activeClassName={s.active}>Настройки</NavLink></div>
         </div>
     );

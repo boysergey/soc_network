@@ -10,7 +10,7 @@ function Content(props) {
         <img src="https://images.samsung.com/is/image/samsung/p5/ru/explore/landscape-photography/Explore_How_To_Take_Great_Landscape_Photography_KV.jpg?$ORIGIN_JPG$" alt="fond"/>
       </div>
      <Profileinfo/>
-      <MyPost postsData = {props.postsData} />
+      <MyPost postsData = {props.postsData} addPost={props.addPost} />
     </div>
 );
 }
