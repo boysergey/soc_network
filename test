@@ -1,49 +1,61 @@
-    const collectDialogs = () => {
-        const dialogs = [];
-        for (let i = 0; i < 4; i++) {
-            dialogs.push(<DialogItem name={props.dialogsData[i].name} id={props.dialogsData[i].id}/>)
-        }
-        return dialogs;
+let store = {
+    _state: {
+        postsData: [
+            {id: 1, message: 'Приветик', likesCount: 85},
+            {id: 2, message: 'Как жизнь Дружище?', likesCount: 12},
+            {id: 3, message: 'Все отлично!!!', likesCount: 1},
+            {id: 4, message: 'Чем занимаешься?', likesCount: 2},
+            {id: 5, message: 'Делаю уроки.', likesCount: 21},
+            {id: 6, message: 'Помочь?', likesCount: 6},
+            {id: 7, message: 'Нет, спасибо.', likesCount: 41},
+            {id: 8, message: 'Если что, приши, помогу.', likesCount: 5},
+        ],
+        dialogsData: [
+            {id: 1, name: 'Andrey'},
+            {id: 2, name: 'Sasha'},
+            {id: 3, name: 'Viktor'},
+            {id: 4, name: 'Valera'},
+            {id: 5, name: 'Igor'},
+            {id: 6, name: 'Irina'},
+            {id: 7, name: 'Tatyana'},
+            {id: 8, name: 'Dmitriy'},
+        ],
+        messagesData: [
+            {id: 1, message: 'Привет'},
+            {id: 2, message: 'Как жизнь?'},
+            {id: 3, message: 'Все отлично!!!'},
+            {id: 4, message: 'Чем занимаешьяс?'},
+            {id: 5, message: 'Делаю уроки.'},
+            {id: 6, message: 'Помочь?'},
+            {id: 7, message: 'Нет, спасибо, я сам'},
+            {id: 8, message: 'Если что, пиши, помогу.'},
+        ],
+        newPostText: ['IT-Message']
+    },
+    getState() {
+        return this._state
+    },
+    _callSubscriber() {
+        console.log('change');
+    },
+    addPost() {
+        let newPost = {
+            id: 5,
+            message: this._state.newPostText,
+            likesCount: 0
+        };
+        this._state.postsData.push(newPost);
+        this._state.newPostText = '';
+        this._callSubscriber(this.state);
+    },
+    updateNewPostText(newText) {
+        this._state.newPostText = newText;
+        this._callSubscriber(this.state);
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
     }
-    return (
-        <div>
-            {collectDialogs()}
-        </div>
-    )
-    function Friends(props) {
-        return(
-            <div>
-                {props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)}
-            </div>
-        )
-    }
+}
 
-
-
-
-    .message {
-        width: 300px;
-        border-radius: 15px;
-        border: 3px solid #1AA0D2;
-        display: inline-block;
-        position: relative;
-    }
-    .message::after {
-        content: '';
-        width: 39px;
-        height: 50px;
-        border-left: 3px solid #1AA0D2;
-        border-bottom: 5px solid #1AA0D2;
-        position: absolute;
-        bottom: -20px;
-        left: 40px;
-        background: white;
-        transform: skewX(-30deg) skewY(-48deg);
-    }
-    .message-in {
-        border-radius: 12px;
-        padding: 30px;
-        background: white;
-        position: relative;
-        z-index: 2;
-    }
+export default store;
+window.store = store;

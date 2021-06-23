@@ -1,7 +1,5 @@
-import {rerenderEntireTree} from "../render";
-
-
-let state = {
+let store = {
+    _state: {
         postsData: [
             {id: 1, message: 'Приветик', likesCount: 85},
             {id: 2, message: 'Как жизнь Дружище?', likesCount: 12},
@@ -22,7 +20,6 @@ let state = {
             {id: 7, name: 'Tatyana'},
             {id: 8, name: 'Dmitriy'},
         ],
-
         messagesData: [
             {id: 1, message: 'Привет'},
             {id: 2, message: 'Как жизнь?'},
@@ -32,17 +29,33 @@ let state = {
             {id: 6, message: 'Помочь?'},
             {id: 7, message: 'Нет, спасибо, я сам'},
             {id: 8, message: 'Если что, пиши, помогу.'},
-        ]
-
+        ],
+        newPostText: ['IT-Message']
+    },
+    getState() {
+        return this._state
+    },
+    _callSubscriber() {
+        console.log('change');
+    },
+    addPost() {
+        let newPost = {
+            id: 5,
+            message: this._state.newPostText,
+            likesCount: 0
+        };
+        this._state.postsData.push(newPost);
+        this._state.newPostText = '';
+        this._callSubscriber(this._state);
+    },
+    updateNewPostText(newText) {
+        this._state.newPostText = newText;
+        this._callSubscriber(this._state);
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    }
 }
 
-export let addPost = (postMessage) => {
-    let newPost = {
-        id: 5,
-        message: postMessage,
-        likesCount: 0
-    };
-    state.postsData.push(newPost)
-    rerenderEntireTree(state);
-}
-export default state;
+export default store;
+window.store = store;

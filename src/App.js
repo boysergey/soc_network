@@ -16,8 +16,9 @@ function App(props) {
         <BrowserRouter> {
             <div className="app-wrapper">
                 <Header/>
+
                 <div className='section'>
-                    <Navbar dialogsData={props.state.dialogsData}/>
+                    <Navbar/>
 
                     <div className="app-wrapper_content">
                         <Route path="/dialogs" render={() => <Dialogs dialogsData={props.state.dialogsData}
@@ -25,7 +26,9 @@ function App(props) {
                         <Route path="/content"
                                render={() => <Content
                                    postsData={props.state.postsData}
-                                   addPost ={props.addPost}/>}/>
+                                   addPost ={props.addPost}
+                                   newPostText ={props.newPostText}
+                               updateNewPostText ={props.updateNewPostText}/>}/>
                         <Route path="/friends" render={() => <Friends dialogsData={props.state.dialogsData}/>}/>
                         <Route path="/groups" render={() => <Groups/>}/>
                         <Route path="/news" render={() => <News/>}/>

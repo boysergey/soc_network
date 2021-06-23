@@ -1,19 +1,25 @@
 import React from 'react';
 import s from './MyPost.module.css'
 import Post from './Post'
+import updateNewPostText from '../../../../redux/State';
 
 const MyPost = (props) => {
 
     let messageElements =
         props.postsData.map(posts => <Post message={posts.message} likesCount={posts.likesCount} id={posts.id}/>)
     let newPostElement = React.createRef()
+
     let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
+        debugger;
+        props.addPost();
         newPostElement.current.value = '';
     }
-    return (
 
+    let onPostChange = ()=>{
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+    return (
         <div>
             <div className={s.posts}>
                 <div className={s.post_title}>
@@ -22,8 +28,8 @@ const MyPost = (props) => {
                 <form>
                     <div className={s.form}>
                         <label htmlFor="formGroupExampleInput"/>
-                        <input type="text" className="form-control" id="formGroupExampleInput" ref={newPostElement}
-                               placeholder="Введите ваше сообщение"/>
+                        <input type="text" className="form-control" id="formGroupExampleInput" ref={newPostElement} onChange={onPostChange}
+                               value={props.newPostText}/>
                     </div>
                     <div className="d-grid gap-2 col-6 mx-auto">
                         <button className="btn btn-primary btn-px" type="button" onClick={addPost}>Отправить сообщение
