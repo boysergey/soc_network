@@ -1,3 +1,7 @@
+
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 let store = {
     _state: {
         postsData: [
@@ -30,30 +34,44 @@ let store = {
             {id: 7, message: 'Нет, спасибо, я сам'},
             {id: 8, message: 'Если что, пиши, помогу.'},
         ],
-        newPostText: ['IT-Message']
-    },
-    getState() {
-        return this._state
+        newPostText: ['']
     },
     _callSubscriber() {
         console.log('change');
     },
-    addPost() {
-        let newPost = {
-            id: 5,
-            message: this._state.newPostText,
-            likesCount: 0
-        };
-        this._state.postsData.push(newPost);
-        this._state.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    updateNewPostText(newText) {
-        this._state.newPostText = newText;
-        this._callSubscriber(this._state);
+    getState() {
+        return this._state
     },
     subscribe(observer) {
         this._callSubscriber = observer;
+    },
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                message: this._state.newPostText,
+                likesCount: 0
+            };
+            this._state.postsData.push(newPost);
+            this._state.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        }
+    }
+}
+export const addPostActionCreator = () => {
+
+    return {
+        type: ADD_POST
+    }
+}
+export const updateNewPostTextActionCreator = (text) => {
+
+    return {
+        type: UPDATE_NEW_POST_TEXT, newText: text
     }
 }
 

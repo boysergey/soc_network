@@ -26,9 +26,9 @@ function App(props) {
                         <Route path="/content"
                                render={() => <Content
                                    postsData={props.state.postsData}
-                                   addPost ={props.addPost}
-                                   newPostText ={props.newPostText}
-                               updateNewPostText ={props.updateNewPostText}/>}/>
+                                   dispatch={props.dispatch}
+                                   newPostText={props.newPostText}
+                               />}/>
                         <Route path="/friends" render={() => <Friends dialogsData={props.state.dialogsData}/>}/>
                         <Route path="/groups" render={() => <Groups/>}/>
                         <Route path="/news" render={() => <News/>}/>
