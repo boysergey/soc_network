@@ -1,11 +1,8 @@
-// noinspection BadExpressionStatementJS
-
 import React from 'react';
 import s from './Navbar.module.css'
 import {NavLink} from 'react-router-dom';
 import Friends from "../Friends/Friends";
 import DialogItem from "../Dialogs/Dialogitem/Dialogsitem";
-// import Photo from "../Photo/Photo";
 
 
 function Navbar(props) {

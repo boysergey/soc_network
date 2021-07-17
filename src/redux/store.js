@@ -1,6 +1,6 @@
-
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+import profileReduser from "./Profile-reduser";
+import dialogsReduser from "./Dialogs-reduser";
+import sidebarReduser from "./sidebar-reduser";
 
 let store = {
     _state: {
@@ -34,7 +34,9 @@ let store = {
             {id: 7, message: 'Нет, спасибо, я сам'},
             {id: 8, message: 'Если что, пиши, помогу.'},
         ],
-        newPostText: ['']
+        newPostText: '',
+        newMessageBody: '',
+        sidebar:{}
     },
     _callSubscriber() {
         console.log('change');
@@ -47,33 +49,14 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 5,
-                message: this._state.newPostText,
-                likesCount: 0
-            };
-            this._state.postsData.push(newPost);
-            this._state.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state = profileReduser(this._state, action)
+        this._state = dialogsReduser(this._state, action)
+        this._state = sidebarReduser(this._state, action)
+        this._callSubscriber(this._state);
     }
-}
-export const addPostActionCreator = () => {
 
-    return {
-        type: ADD_POST
-    }
-}
-export const updateNewPostTextActionCreator = (text) => {
 
-    return {
-        type: UPDATE_NEW_POST_TEXT, newText: text
-    }
-}
 
+}
 export default store;
 window.store = store;

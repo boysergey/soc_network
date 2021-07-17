@@ -11,25 +11,25 @@ import Groups from './components/Groups/Groups';
 import News from './components/News/News';
 import Music from './components/Music/Music'
 
-function App(props) {
+const App=(props)=> {
+    const [state,] = React.useState(props.store.getState())
     return (
         <BrowserRouter> {
             <div className="app-wrapper">
                 <Header/>
-
                 <div className='section'>
                     <Navbar/>
 
                     <div className="app-wrapper_content">
-                        <Route path="/dialogs" render={() => <Dialogs dialogsData={props.state.dialogsData}
-                                                                      messagesData={props.state.messagesData}/>}/>
+                        <Route path="/dialogs" render={() => <Dialogs dialogsData={state.dialogsReduser.dialogsData} store={props.store}
+                                                                      messagesData={state.dialogsReduser.messagesData}/>}/>
                         <Route path="/content"
                                render={() => <Content
-                                   postsData={props.state.postsData}
+                                   postsData={state.profileReduser.postsData}
                                    dispatch={props.dispatch}
-                                   newPostText={props.newPostText}
+                                   newPostText={state.profileReduser.newPostText}
                                />}/>
-                        <Route path="/friends" render={() => <Friends dialogsData={props.state.dialogsData}/>}/>
+                        <Route path="/friends" render={() => <Friends dialogsData={state.dialogsReduser.dialogsData}/>}/>
                         <Route path="/groups" render={() => <Groups/>}/>
                         <Route path="/news" render={() => <News/>}/>
                         <Route path="/music" render={() => <Music/>}/>

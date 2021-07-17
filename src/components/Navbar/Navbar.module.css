@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: start;
 }
+.navbar a:hover {
+  text-shadow: 0 1px 1px #000, 0px 1px 2px #000;
+  color: #0a58ca;
+}
 
 .navbar a {
   margin-left: 60px;
