@@ -1,26 +1,28 @@
 import React from 'react';
-import s from './MyPost.module.css'
-import Post from './Post'
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/Profile-reduser";
+import profileReduser, {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/Profile-reduser";
 import MyPost from "./MyPost";
+import StoreContext from "../../../../storeContext";
 
+const MyPostContainer = () => {
+    return <StoreContext.Consumer>
+        {
+            (store) => {
+                let state = store.getState()
+                let addPost = (e) => {
+                    e.preventDefault();
+                    store.dispatch(addPostActionCreator());
+                }
+                let onPostChange = (text) => {
+                    let action = updateNewPostTextActionCreator(text);
+                    store.dispatch(action);
+                }
+                return <MyPost updateNewPostText={onPostChange}
+                               addPost={addPost}
+                               myPostInfo={state.profileReduser.postsData}
+                               newPostText={state.profileReduser.newPostText}/>
+            }
+        }
+    </StoreContext.Consumer>
 
-const MyPostContainer = (props) => {
-    let messageElements =
-        props.postsData.map(posts => <Post message={posts.message} likesCount={posts.likesCount} id={posts.id}/>)
-    let newPostElement = React.createRef()
-
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
-        newPostElement.current.value = '';
-    }
-
-    let onPostChange = () => {
-        let action = updateNewPostTextActionCreator(text);
-        props.dispatch(action)
-    }
-    return (
-        <MyPost updateNewPostText={o}/>
-    );
 }
 export default MyPostContainer;

@@ -1,12 +1,9 @@
 import React from 'react';
 import s from './Navbar.module.css'
 import {NavLink} from 'react-router-dom';
-import Friends from "../Friends/Friends";
-import DialogItem from "../Dialogs/Dialogitem/Dialogsitem";
 
 
-function Navbar(props) {
-    let dialogsElements;
+function Navbar() {
 
     return (
         <div className={s.navbar}>
@@ -16,8 +13,6 @@ function Navbar(props) {
             <div className={s.menu}><NavLink to="/news" activeClassName={s.active}>Новости</NavLink></div>
             <div className={s.menu}><NavLink to="/music" activeClassName={s.active}>Музыка</NavLink></div>
             <div className={s.menu_friends}><NavLink to="/friends" activeClassName={s.active}>Друзья</NavLink></div>
-            {/*<Friends dialogsData={props.dialogsData}/>*/}
-            {/*<Photo dialogsData={props.dialogsData}/>*/}
             <div className={s.menu_last}><NavLink to="/settings" activeClassName={s.active}>Настройки</NavLink></div>
         </div>
     );

@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Content.module.css';
-import MyPost from './My Post/Post/MyPost';
 import Profileinfo from './Profileinfo/Profileinfo';
+import MyPostContainer from "./My Post/Post/MyPostContainer";
 
-function Content(props) {
+const Content=() =>{
     return (
         <div>
             <div className={s.fond}>
@@ -12,10 +12,7 @@ function Content(props) {
                     alt="fond"/>
             </div>
             <Profileinfo/>
-            <MyPost postsData={props.postsData}
-                    dispatch={props.dispatch}
-                    newPostText={props.newPostText}
-            />
+            <MyPostContainer />
         </div>
     );
 }
